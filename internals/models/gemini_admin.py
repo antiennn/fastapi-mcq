@@ -4,7 +4,7 @@ from gemini_config.models.gemini_model import Gemini
 
 
 class GeminiAdmin(ModelView, model=Gemini):
-    name = "Gemini keys"
+    name = "Gemini key"
     page_size_options = [25, 50, 100, 200]
     category = "Gemini config"
 
@@ -16,5 +16,6 @@ class GeminiAdmin(ModelView, model=Gemini):
         Gemini.access_token,
         Gemini.description,
         Gemini.last_expired_at,
-        Gemini
+        Gemini.created_at,
+        Gemini.updated_at,
     ]
